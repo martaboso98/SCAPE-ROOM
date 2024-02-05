@@ -44,3 +44,9 @@ footer {
     width: 100%;
 }
 
+#info {
+    background-color: rgb(176, 0, 0);
+    color:white;
+    padding: 5%;
+    text-align: justify;
+}
