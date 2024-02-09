@@ -6,13 +6,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
 #bienvenida {
     max-width: 800px;
     margin: 2em auto;
@@ -43,6 +36,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 /* Tabla de pagos */
 ul {
@@ -261,5 +255,61 @@ a {
     pointer-events: none;
     cursor: default;
     opacity: 0.5;
+
+
+#info {
+    background-color: rgb(176, 0, 0);
+    color: white;
+    padding: 3%;
+    text-align: center;
+}
+
+#info h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#info p {
+    font-size: 1.2em;
+    ;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    color: white;
+    filter: brightness(0) invert(1);
+}
+
+.centrar {
+    text-align: center;
+}
+
+/*Header*/
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar-toggler {
+    border-color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+}
+
+.formulario {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
