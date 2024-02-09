@@ -6,13 +6,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
 #bienvenida {
     max-width: 800px;
     margin: 2em auto;
