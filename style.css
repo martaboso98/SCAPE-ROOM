@@ -6,13 +6,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
 #bienvenida {
     max-width: 800px;
     margin: 2em auto;
@@ -44,29 +37,3 @@ footer {
     width: 100%;
 }
 
-#info {
-    background-color: rgb(176, 0, 0);
-    color:white;
-    padding: 3%;
-    text-align: center;
-}
-
-#info h3 {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-#info p {
-    font-size: 1.2em;;
-}
-
-img {
-    width: 100px;
-    height: auto;
-    color:white;
-    filter: brightness(0) invert(1);
-}
-
-.centrar {
-    text-align: center;
-}
