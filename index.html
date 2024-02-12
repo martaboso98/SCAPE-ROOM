@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room Web</title>
+    <!-- CSS -->
     <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -14,76 +16,118 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-       
-
 </head>
 
 <body>
     <header>
-        <h1>Escape Room: Desafío Web</h1>
-    </header>
-
-    <section id="bienvenida">
-        <h2>¡Bienvenido al Escape Room!</h2>
-        <p>Te encuentras en una emocionante misión web. Descubre los secretos, resuelve los desafíos y ¡escapa con
-            éxito!</p>
-
-        <h2>¿Qué necesitas?</h2>
-        <p>Necesitarás acceso a un ordenador con conexión a Internet y las siguientes herramientas:</p>
-        <ol>
-            <li>Navegador web (recomendado: Google Chrome)</li>
-            <li>FileZilla (puedes descargarlo <a href="https://filezilla-project.org/">aquí</a>)</li>
-        </ol>
-
-        <h2>Instrucciones</h2>
-        <p>Sigue estos pasos para empezar:</p>
-        <ol>
-            <li>Descarga el repositorio del proyecto desde el código QR proporcionado.</li>
-            <li>Abre el repositorio en Docker utilizando los comandos proporcionados.</li>
-            <li>Explora el código fuente, busca pistas y resuelve los desafíos.</li>
-        </ol>
-    </section>
-
-    
-    <footer class="text-light bg-dark pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 mb-3 mb-md-0 px-5">
-                    <h5>NOTA INFORMATIVA </h5>
-                    <p>Este Escape Room virtual se basa en el uso creativo de tecnologías como GitHub y Docker para proporcionar una experiencia interactiva y educativa centrada en el aprendizaje práctico de estas herramientas. </p>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-3 mb-md-0 px-5">
-                    <h5>CONTACTO</h5>
-                    <div class="contact-info">
-                        <ul class="list-unstyled">
-                            <li>
-                                <i class="fas fa-envelope"></i> 
-                                Email: contacto@escaperoom.com
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i> 
-                                Teléfono: 657 456 7890
-                            </li>
-                            <li>
-                                <i class="fab fa-whatsapp"></i> 
-                                WhatsApp: 654 456 7890
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 px-5">
-                    <h5>SÍGUENOS</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo-scape-room.png" alt="Logo" width="50" height="50">
+                    Escape Room: Desafío Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#precios">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#info">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </nav>
+    </header>
+
+    <section id="precios">
+        <!-- Pagos -->
+        <div class="pricing-wrapper clearfix">
+            <!-- Titulo -->
+            <h1 class="pricing-table-title text-center">Tabla de Precios</h1>
+
+            <div class="pricing-table">
+                <h3 class="pricing-title">Free</h3>
+                <div class="price">0€<sup>/equipo</sup></div>
+                <!-- Lista de Caracteristicas / Propiedades -->
+                <ul class="table-list">
+                    <li>Juego Completo</li>
+                    <li>Empieza a jugar cuando quieras</li>
+                    <li>Clasificación en tiempo real</li>
+                    <li>Desbloquea las soluciones de los puzles</li>
+                    <li>Panel de control del partido</li>
+                    <li>Sin publicidad</li>
+                    <li>Equipo de asistencia</li>
+                </ul>
+                <!-- Contratar / Comprar -->
+                <div class="table-buy">
+                    <a href="#" class="pricing-action">Jugar</a>
+                </div>
+            </div>
+
+            <div class="pricing-table recommended">
+                <h3 class="pricing-title">Premium</h3>
+                <div class="price">10€<sup>/equipo</sup></div>
+                <!-- Lista de Caracteristicas / Propiedades -->
+                <ul class="table-list">
+                    <li>Juego completo</li>
+                    <li>Empieza a jugar cuando quieras</li>
+                    <li>Clasificación en tiempo real</li>
+                    <li>Desbloquea las soluciones de los puzles</li>
+                    <li>Panel de control del partido</span></li>
+                    <li>Sin publicidad</li>
+                </ul>
+                <!-- Contratar / Comprar -->
+                <div class="table-buy">
+                    <a href="#" class="pricing-action disabled">Jugar</a>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 px-3">
+                    <figure class="centrar">
+                        <img src="pc.png" alt="pc">
+                    </figure>
+                    <h3>LO QUE NECESITAS</h3>
+                    <p>Todo lo que necesitas para jugar es un PC y conexión a Internet.</p>
+                </div>
+                <div class="col-lg-4 px-3">
+                    <figure class="centrar">
+                        <img src="reloj.png" alt="reloj">
+                    </figure>
+                    <h3>TIEMPO DE JUEGO</h3>
+                    <p>Desde media hora de juego hasta varios días, la duración del juego depende de ti.</p>
+                </div>
+                <div class="col-lg-4 px-3">
+                    <figure class="centrar">
+                        <img src="impresora.png" alt="impresora">
+                    </figure>
+                    <h3>NADA QUE IMPRIMIR</h3>
+                    <p>No necesitas una impresora para jugar, solo tienes que navegar por el sitio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2023 Escape Room Web</p>
     </footer>
     
 
