@@ -260,4 +260,10 @@ img {
 
 footer {
     margin-top: 3%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
 }
