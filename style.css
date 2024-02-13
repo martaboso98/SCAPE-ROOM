@@ -156,6 +156,26 @@ a {
     background: #228799;
 }
 
+.section-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.section-btn .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50px; 
+    text-align: center;
+     width: 300px;
+    text-decoration: none;
+}
+
+
+
+
 /* Responsive */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .pricing-wrapper {
