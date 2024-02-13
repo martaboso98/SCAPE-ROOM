@@ -9,6 +9,9 @@
 </head>
 
 <body class="bg-gray-900 text-white">
+    <div id="intuicionCounter" style="position: absolute; top: 10px; right: 10px;">
+        Intuición: <span id="intuicionDisplay">100</span>
+    </div>
     <div class="container mx-auto px-4">
         <h1 class="text-xl font-bold text-center my-8">Sombras sobre Monteluz</h1>
 
@@ -71,6 +74,7 @@
             <p>Sofía se infiltra en una gala en el club más exclusivo de la ciudad...</p>
             <!-- Botones para interactuar con los personajes -->
             <div class="flex flex-col space-y-4 my-4">
+                <!-- Botones para interactuar con los personajes en Capítulo 2 -->
                 <button onclick="interrogarSospechoso('familia')"
                     class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Interrogar a la
                     familia Vidal</button>
@@ -80,11 +84,16 @@
                 <button onclick="interrogarSospechoso('socios')"
                     class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Investigar a los
                     socios de negocios</button>
+
             </div>
         </div>
 
     </div>
-    <script src="js/app.js"></script>
+    
+    <script src="js/estadoJuego.js"></script>
+    <script src="js/capitulo1.js"></script>
+    <script src="js/capitulo2.js"></script>
+    
 </body>
 
 </html>
