@@ -72,7 +72,7 @@ function mostrarSalaPistasOcultas() {
 
 function verificarCombinacion() {
     const combinacionHabitacion = document.getElementById('combinacionHabitacion').value;
-    const combinacionCorrecta = "0102"; // Asumiendo que esta es la combinación correcta
+    const combinacionCorrecta = "0102"; 
     let penalizacion = 0;
 
 
@@ -164,7 +164,7 @@ function borrarUltimoNumero() {
 
 function verificarCombinacionCandado() {
     const combinacionCandado = document.getElementById('combinacionCandado').value;
-    const combinacionCorrecta = "0102"; // Asumiendo que esta es la combinación correcta
+    const combinacionCorrecta = "0102"; 
 
 
     if (combinacionCandado === combinacionCorrecta) {
