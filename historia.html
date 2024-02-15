@@ -98,12 +98,64 @@
                 </div>
             </div>
         </div>
+        <!-- Capítulo   3: Las Sombras de la Mansión -->
+        <div id="capitulo3" class="hidden">
+            <h2 class="text-lg font-bold my-4">Capítulo 3: Las Sombras de la Mansión</h2>
+            <p>Sofía se adentra en la mansión, sintiendo cómo la penumbra de la noche envuelve sus pasos. Las sombras de
+                los árboles antiguos proyectan figuras inquietantes en la fachada, como si fueran presagios de lo que la
+                espera dentro. La puerta principal, entreabierta, parece invitarla a entrar, pero también a desafiarla a
+                descubrir lo que se esconde en las profundidades de la mansión.</p>
 
+            <!-- Sala de Pistas Ocultas -->
+            <div id="salaPistasOcultas" class="">
+                <h3 class="text-md font-semibold my-4">Sala de Pistas Ocultas</h3>
+                <p>Debes resolver acertijos basados en las evidencias recopiladas para descubrir la habitación secreta
+                    donde se guardan los diarios de Vidal.</p>
+                <div class="diario">
+                    <p>Encuentras un diario con un candado. Al abrirlo con la llave, puedes descurbir más información para la investigación</p>
+                    <button onclick="abrirCandadoDiario()"
+                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Abrir
+                        Candado</button>
+                </div>
+                <div id="contenidoDiario" class="hidden">
+                    <p>No encuentras más que inversiones de Vidal y otra copia de los papeles legales de la adquisición de la mansión.</p>
+                </div>
+            </div>
+
+            <!-- Habitación Sellada -->
+            <div id="habitacionSellada" class="">
+                <h3 class="text-md font-semibold my-4">Habitación Sellada</h3>
+                <p>Encuentras una puerta sellada que solo se abre con la combinación correcta, basada en las fechas más
+                    significativas de la vida de Vidal.</p>
+                <input type="text" id="combinacionHabitacion" placeholder="Ingresa la combinación" class="text-black">
+                <button onclick="verificarCombinacion()"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Verificar
+                    Combinación</button>
+                <!-- Contenido de la Habitación Sellada -->
+                <div id="contenidoHabitacion" class="hidden">
+                    <p>Encuentras una nota escrita por Vidal que dice: "No confío en nadie de mi entorno. Me siento observado constantemente, incluso cuando estoy solo. ¿Quién está detrás de esta mansión? ¿Es alguien que conozco o alguien que me ha estado siguiendo sin que yo lo sepa?"</p>
+                </div>
+            </div>
+
+            <!-- Final Verdadero / Final Falso -->
+            <div id="finalVerdadero" class="hidden">
+                <h3 class="text-md font-bold my-4">Final Verdadero</h3>
+                <p>Si mantienes una alta intuición y resuelves correctamente todos los desafíos, descubres al verdadero
+                    asesino. Revelas una conspiración que va más allá de lo personal, implicando secretos de poder y
+                    codicia.</p>
+            </div>
+            <div id="finalFalso" class="hidden">
+                <h3 class="text-md font-bold my-4">Final Falso</h3>
+                <p>Si tus puntos de intuición se agotan o si cometes errores en los desafíos, te dejas llevar por las
+                    apariencias. Acusas a un sospechoso incorrecto y dejas al verdadero culpable en la sombra.</p>
+            </div>
+        </div>
     </div>
 
     <script src="js/estadoJuego.js"></script>
     <script src="js/capitulo1.js"></script>
     <script src="js/capitulo2.js"></script>
+    <script src="js/capitulo3.js"></script>
 
 </body>
 

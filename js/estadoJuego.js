@@ -1,6 +1,6 @@
 // estadoJuego.js
 let estadoJuego = {
-    capituloActual: 1,
+    capituloActual:  1,
     evidencias: [],
     progreso: {},
     pistasCap1: {
@@ -8,19 +8,18 @@ let estadoJuego = {
         biblioteca: false,
         jardin: false
     },
-
-    puntosDeIntuicion: 100, // Todos comienzan con 100 puntos de intuición.
+    puntosDeIntuicion:  100, // Todos comienzan con  100 puntos de intuición.
     interaccionesCap2: {
         familia: false,
         amigos: false,
         socios: false
     },
-    penalizaciones: 0, // Rastrea el número de penalizaciones para impactar en la narrativa.
-
+    penalizaciones:  0, // Rastrea el número de penalizaciones para impactar en la narrativa.
     capitulo3: {
-        investigacionMansion: false,
-        descubrimientoSecreto: false,
-        confrontacionFinal: false,
+        salaPistasOcultas: false,
+        habitacionSellada: false,
+        finalVerdadero: false,
+        finalFalso: false
     },
 };
 
@@ -61,15 +60,19 @@ function ocultarTodosLosCapitulos() {
 
 // Agrega una función para verificar si es posible avanzar al Capítulo 3
 function puedeAvanzarACapitulo3() {
-    // Se requiere haber interrogado correctamente a la familia y a los socios, los amigos son opcionales
-    return estadoJuego.interaccionesCap2.familia && estadoJuego.interaccionesCap2.socios && estadoJuego.puntosDeIntuicion > 50;
+    // Se requiere haber interrogado correctamente a la amigos y a los socios, los amigos son opcionales
+    return estadoJuego.interaccionesCap2.amigos && estadoJuego.interaccionesCap2.socios && estadoJuego.puntosDeIntuicion >  50;
 }
 
 // Modifica la función seleccionOpcion para incluir la lógica de avance al Capítulo 3
 function seleccionOpcion(capituloSiguiente) {
-    // Verifica si se cumplen las condiciones para avanzar al Capítulo 3
-    if (capituloSiguiente === 3 && puedeAvanzarACapitulo3()) {
-        estadoJuego.capituloActual = 3;
+    console.log(estadoJuego); // Agrega esta línea para depurar
+    if (capituloSiguiente ===  3 && puedeAvanzarACapitulo3()) {
+        estadoJuego.capituloActual =  3;
+        estadoJuego.capitulo3.salaPistasOcultas = true; // Inicializa la Sala de Pistas Ocultas como visible
+        estadoJuego.capitulo3.habitacionSellada = false; // Inicializa la Habitación Sellada como oculta
+        estadoJuego.capitulo3.finalVerdadero = false; // Inicializa el Final Verdadero como oculto
+        estadoJuego.capitulo3.finalFalso = false; // Inicializa el Final Falso como oculto
     } else {
         estadoJuego.capituloActual = capituloSiguiente;
     }
@@ -87,7 +90,7 @@ function cargarProgreso() {
     const progresoGuardado = localStorage.getItem('estadoJuego');
     if (progresoGuardado) {
         estadoJuego = JSON.parse(progresoGuardado);
-        // Initialize interaccionesCap2 if it's missing
+
         if (!estadoJuego.interaccionesCap2) {
             estadoJuego.interaccionesCap2 = {
                 familia: false,
@@ -95,18 +98,26 @@ function cargarProgreso() {
                 socios: false
             };
         }
+        if (!estadoJuego.capitulo3) {
+            estadoJuego.capitulo3 = {
+                salaPistasOcultas: false,
+                habitacionSellada: false,
+                finalVerdadero: false,
+                finalFalso: false
+            };
+        }
         console.log('Estado del juego cargado desde localStorage:', estadoJuego);
         mostrarCapitulo(estadoJuego.capituloActual);
     } else {
         console.log('No hay progreso guardado en localStorage. Iniciando un nuevo juego.');
-        iniciarJuego(); // Start a new game if there's no saved progress
+        iniciarJuego();
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarProgreso();
     document.getElementById('comenzar').addEventListener('click', () => {
-        localStorage.clear(); // Clear the localStorage
+        localStorage.clear();
         iniciarJuego(); // Restart the game
     }); document.getElementById('continuar').addEventListener('click', cargarProgreso);
 });

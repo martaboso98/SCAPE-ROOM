@@ -10,7 +10,7 @@ function explorarPista(pista) {
 
     switch (pista) {
         case 'escritorio':
-            mensaje = "Al revolver los papeles en el escritorio de Vidal, encuentras una serie de recibos y documentos legales que apuntan hacia una gran inversión en una propiedad desconocida. Una dirección específica llama tu atención: la de una antigua mansión en las afueras de la ciudad.";
+            mensaje = "Al revolver los papeles en el escritorio de Vidal, encuentras una serie de recibos y documentos legales que apuntan hacia una gran inversión realizada el 1 de febrero en una propiedad desconocida. Una dirección específica llama tu atención: la de una antigua mansión en las afueras de la ciudad.";
             break;
         case 'biblioteca':
             mensaje = "Mientras examinas la biblioteca, un libro mal colocado revela un compartimento secreto detrás de la estantería. Dentro, hallas un mapa de la ciudad con una ubicación marcada: la misma mansión mencionada en los documentos del escritorio. Junto al mapa, hay una llave antigua y una nota que dice: 'La verdad yace bajo las sombras de la vieja Monteluz'.";
