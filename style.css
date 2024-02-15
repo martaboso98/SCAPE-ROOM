@@ -268,3 +268,65 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Instrucciones */
+
+
+
+
+.desafio {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 0;
+    margin-left: 40%;
+    display: inline-table;
+
+}
+
+.mensaje-bienvenida h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mensaje-bienvenida p {
+    color: #666;
+    text-align: center;
+}
+
+.desafio h2 {
+    color: #333;
+}
+
+.desafio p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.desafio pre {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.desafio code {
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.desafio button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.desafio button:hover {
+    background-color: #45a049;
+}
