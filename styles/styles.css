@@ -1,0 +1,26 @@
+/* Estilos para el teclado numérico y el input de la combinación */
+#tecladoNumerico {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap:  10px;
+    justify-content: center;
+}
+
+#tecladoNumerico button {
+    padding:  10px;
+    font-size:  18px;
+    color: black;
+    border:  1px solid #ccc;
+    border-radius:  5px;
+    background-color: #f2f2f2;
+}
+
+#tecladoNumerico button:hover {
+    background-color: #ddd;
+}
+
+#combinacionHabitacion {
+    width:  100%;
+    max-width:  200px;
+    text-align: center;
+}

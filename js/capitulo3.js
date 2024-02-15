@@ -16,7 +16,7 @@ function explorarMansion(nivel) {
                 alert("Con la llave encontrada, abres el diario de Vidal. La fecha clave del evento que cambió su destino se revela: el día de su última gran inversión.");
                 estadoJuego.capitulo3.combinacionDescubierta = "0102"; // Fecha de compra de la Mansión
                 estadoJuego.capitulo3.salaPistasResuelta = true;
-                actualizarPuntosDeIntuicion(10);
+                actualizarPuntosDeIntuicion(0);
             } else {
                 alert("Necesitas algo para abrir este candado. Recuerda la llave encontrada previamente.");
                 actualizarPuntosDeIntuicion(-30);
@@ -27,7 +27,7 @@ function explorarMansion(nivel) {
             if (estadoJuego.capitulo3.salaPistasResuelta) {
                 alert("Introduces la combinación en la habitación sellada, desvelando documentos que implican a Vidal en asuntos turbios relacionados con la mansión.");
                 estadoJuego.capitulo3.habitacionSelladaAbierta = true;
-                actualizarPuntosDeIntuicion(20);
+                actualizarPuntosDeIntuicion(0);
             } else {
                 alert("La habitación sellada se mantiene cerrada. La combinación es necesaria.");
             }
@@ -70,11 +70,10 @@ function mostrarSalaPistasOcultas() {
     }
 }
 
-// capitulo3.js
-
 function verificarCombinacion() {
     const combinacionHabitacion = document.getElementById('combinacionHabitacion').value;
     const combinacionCorrecta = "0102"; // Asumiendo que esta es la combinación correcta
+    let penalizacion = 0;
 
 
     if (combinacionHabitacion === combinacionCorrecta) {
@@ -82,24 +81,100 @@ function verificarCombinacion() {
         estadoJuego.capitulo3.habitacionSelladaAbierta = true;
         mostrarContenidoHabitacion();
     } else {
+        penalizacion = 30;
+        estadoJuego.puntosDeIntuicion -= penalizacion;
+        alert(`Te sientes menos seguro de tus teorías. Puntos de intuición: ${estadoJuego.puntosDeIntuicion}`);
         // Si la combinación es incorrecta, se muestra un mensaje de error
         alert("La combinación es incorrecta. Intenta de nuevo.");
     }
 }
 
+
+function cerrarNota() {
+    // Oculta el modal de la nota
+    const modalNota = document.getElementById('modalNota');
+    modalNota.classList.add('hidden');
+
+    // Muestra el final correspondiente basado en los puntos de intuición
+    if (estadoJuego.puntosDeIntuicion > 50) {
+        estadoJuego.capitulo3.finalVerdadero = true;
+        mostrarFinalVerdadero();
+    } else {
+        estadoJuego.capitulo3.finalFalso = true;
+        mostrarFinalFalso();
+    }
+}
+
+function mostrarFinalVerdadero() {
+    // Muestra el modal del final verdadero
+    const modalFinalVerdadero = document.getElementById('modalFinalVerdadero');
+    modalFinalVerdadero.classList.remove('hidden');
+}
+
+function mostrarFinalFalso() {
+    // Muestra el modal del final falso
+    const modalFinalFalso = document.getElementById('modalFinalFalso');
+    modalFinalFalso.classList.remove('hidden');
+}
+
+function cerrarModalFinal() {
+    // Oculta el modal del final
+    const modalFinalVerdadero = document.getElementById('modalFinalVerdadero');
+    const modalFinalFalso = document.getElementById('modalFinalFalso');
+    modalFinalVerdadero.classList.add('hidden');
+    modalFinalFalso.classList.add('hidden');
+}
+
 function mostrarContenidoHabitacion() {
-    // Oculta la Habitación Sellada
-    const habitacionSellada = document.getElementById('habitacionSellada');
-    habitacionSellada.classList.add('hidden');
-
-
-    // Muestra el contenido de la Habitación Sellada
-    const contenidoHabitacion = document.getElementById('contenidoHabitacion');
-    contenidoHabitacion.classList.remove('hidden');
+    // Muestra el modal de la nota
+    const modalNota = document.getElementById('modalNota');
+    modalNota.classList.remove('hidden');
 }
 
 function abrirCandadoDiario() {
-    // Muestra la combinación para el siguiente nivel
-    const contenidoDiario = document.getElementById('contenidoDiario');
-    contenidoDiario.classList.remove('hidden');
+    // Muestra el modal del diario
+    const modalDiario = document.getElementById('modalDiario');
+    modalDiario.classList.remove('hidden');
+}
+
+function cerrarModalDiario() {
+    // Oculta el modal del diario
+    const modalDiario = document.getElementById('modalDiario');
+    modalDiario.classList.add('hidden');
+
+    // Muestra el teclado numérico y el botón de verificar combinación
+    const habitacionSellada = document.getElementById('habitacionSellada');
+    habitacionSellada.classList.remove('hidden');
+
+    const tecladoNumerico = document.getElementById('tecladoNumerico');
+    tecladoNumerico.classList.remove('hidden');
+    const botonVerificarCombinacion = document.getElementById('botonVerificarCombinacion');
+    botonVerificarCombinacion.classList.remove('hidden');
+}
+
+function agregarNumero(numero) {
+    const combinacionHabitacion = document.getElementById('combinacionHabitacion');
+    combinacionHabitacion.value += numero;
+}
+
+function borrarUltimoNumero() {
+    const combinacionHabitacion = document.getElementById('combinacionHabitacion');
+    combinacionHabitacion.value = combinacionHabitacion.value.slice(0, -1);
+}
+
+function verificarCombinacionCandado() {
+    const combinacionCandado = document.getElementById('combinacionCandado').value;
+    const combinacionCorrecta = "0102"; // Asumiendo que esta es la combinación correcta
+
+
+    if (combinacionCandado === combinacionCorrecta) {
+        // Si la combinación es correcta, se abre el candado y se muestra el contenido
+        estadoJuego.capitulo3.combinacionDescubierta = "0102"; // Fecha de compra de la Mansión
+        estadoJuego.capitulo3.salaPistasResuelta = true;
+        actualizarPuntosDeIntuicion(0);
+        mostrarContenidoHabitacion();
+    } else {
+        // Si la combinación es incorrecta, se muestra un mensaje de error
+        alert("La combinación es incorrecta. Intenta de nuevo.");
+    }
 }

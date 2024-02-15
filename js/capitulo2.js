@@ -18,7 +18,7 @@ function interrogarSospechoso(grupo) {
     switch (grupo) {
         case 'familia':
             mensaje = "Al presionar a la familia sobre las finanzas de Vidal, mencionan su reciente adquisición de una mansión con reluctancia. Un miembro murmura, 'Ese lugar... tiene que guardar secretos oscuros por la obsesión que tenía Vidal.' Su nerviosismo es palpable, especialmente cuando se menciona la llave encontrada";
-            penalizacion = -30;
+            penalizacion = 30;
             break;
         case 'amigos':
             mensaje = "Los amigos de Vidal, visiblemente incómodos, recuerdan sus últimas semanas con detalles dispersos. 'Se obsesionó con esa mansión, como si algo o alguien lo llamara allí', dice uno, evadiendo tu mirada. El tono sugiere que algo más que la búsqueda de paz atormentaba a Vidal.";
