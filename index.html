@@ -52,15 +52,31 @@
         </nav>
     </header>
     <!-- Instrucciones -->
-    <div class="instruc">
-        <ul>
-            <li>Desc repo</li>
-            <li>clonar en el docker</li>
-            <li>Subir la web al filezilla</li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    <div class="contenedor">
+        <div class="mensaje-bienvenida">
+            <h1>Bienvenido a la Misión del Desarrollador Intrépido</h1>
+            <p>¡Tu misión es escapar resolviendo desafíos técnicos!</p>
+            <button onclick="mostrarDesafio(1)">Comenzar</button>
+        </div>
+        
+        <div id="desafio1" class="desafio">
+            <h2>Desafío 1: Clonar Repositorio de Git</h2>
+            <p>En esta estación, clona el repositorio con el siguiente comando:</p>
+            <code>git clone https://github.com/tu-usuario/tu-repositorio.git</code>
+        </div>
+
+        <div id="desafio2" class="desafio">
+            <h2>Desafío 2: Subir la Web al FileZilla</h2>
+            <p>Accede al servidor con FileZilla y sube los archivos de la aplicación web.</p>
+            <p>Credenciales: Usuario: tu-usuario | Contraseña: tu-contrasena</p>
+        </div>
+
+        <div id="desafio3" class="desafio">
+            <h2>Desafío 3: Levantar la Web con Docker</h2>
+            <p>Usa Docker para levantar la aplicación web.</p>
+
+        </div>
+
     <!-- Tabla de precio -->
     <section id="precios">
         <!-- Pagos -->
