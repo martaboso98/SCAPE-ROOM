@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sombras sobre Monteluz</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet">
+    </head>
+
+    <body class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-xl font-bold text-center my-8">Sombras sobre
+                Monteluz</h1>
+
+            <!-- Sinopsis y botones de inicio -->
+            <div id="inicio">
+                <p class="mb-4">Monteluz, una joya oculta entre valles, siempre
+                    fue un refugio para aquellos que buscaban la
+                    tranquilidad de una comunidad donde todos se conocen y
+                    comparten lazos más allá de la mera vecindad.
+                    Pero incluso en el lugar más pacífico, las sombras se
+                    extienden al caer la noche.</p>
+                <p class="mb-4">La aparente paz de Monteluz se ve estremecida
+                    cuando Arturo Vidal, un empresario local
+                    conocido tanto por su éxito como por sus conexiones con
+                    oscuros secretos de la ciudad, es encontrado sin
+                    vida en su mansión. La noticia sacude los cimientos de la
+                    comunidad, despertando viejos rumores y
+                    temores largamente olvidados.</p>
+                <p class="mb-4">En medio de este caos, una llamada anónima llega
+                    a Sofía Márquez, una detective privada con
+                    un talento especial para desenterrar verdades ocultas. Con
+                    nada más que su ingenio y determinación,
+                    Sofía se adentra en el corazón de Monteluz, decidida a
+                    desvelar las capas de misterio que rodean la
+                    muerte de Vidal.</p>
+                <button id="comenzar"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Comenzar</button>
+                <button id="continuar"
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Continuar</button>
+            </div>
+
+            <!-- Capítulo 1: La Llamada Anónima - Diseño Mejorado -->
+            <div id="capitulo1" class="hidden">
+                <h2 class="text-lg font-bold my-4">Capítulo 1: La Llamada
+                    Anónima</h2>
+                <p class="mb-4">El jugador, asumiendo el rol de Sofía Márquez,
+                    comienza su investigación tras recibir una
+                    llamada anónima...</p>
+                <p class="mb-4">Explora la mansión en busca de pistas:</p>
+                <div class="flex flex-wrap -mx-2">
+                    <div class="w-full md:flex-1 px-2 mb-4">
+                        <button onclick="explorarPista('escritorio')"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded block w-full mb-2">Explorar
+                            el escritorio</button>
+                        <p class="text-sm text-justify">El escritorio está
+                            desordenado, documentos y un diario personal
+                            abierto podrían contener pistas.</p>
+                    </div>
+                    <div class="w-full md:flex-1 px-2 mb-4">
+                        <button onclick="explorarPista('biblioteca')"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded block w-full mb-2">Revisar
+                            la biblioteca</button>
+                        <p class="text-sm text-justify">La biblioteca esconde
+                            secretos entre sus volúmenes antiguos, una
+                            estantería parece haber sido movida
+                            recientemente.</p>
+                    </div>
+                    <div class="w-full md:flex-1 px-2 mb-4">
+                        <button onclick="explorarPista('jardin')"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded block w-full mb-2">Inspeccionar
+                            el jardín</button>
+                        <p class="text-sm text-justify">El jardín, aunque
+                            hermoso, parece guardar la melancolía de los días
+                            mejores. Quizás no revele una pista, pero sí el
+                            estado de ánimo de la casa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capítulo 2: Secretos de la Alta Sociedad -->
+            <div id="capitulo2" class="hidden">
+                <h2 class="text-lg font-bold my-4">Capítulo 2: Secretos de la
+                    Alta Sociedad</h2>
+                <p>Sofía se infiltra en una gala en el club más exclusivo de la
+                    ciudad...</p>
+                <!-- Botones para interactuar con los personajes -->
+                <div class="flex flex-col space-y-4 my-4">
+                    <button onclick="interrogarSospechoso('familia')"
+                        class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Interrogar
+                        a la
+                        familia Vidal</button>
+                    <button onclick="interrogarSospechoso('amigos')"
+                        class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Hablar
+                        con los
+                        amigos cercanos</button>
+                    <button onclick="interrogarSospechoso('socios')"
+                        class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Investigar
+                        a los
+                        socios de negocios</button>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>
