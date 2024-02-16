@@ -63,8 +63,94 @@
                 </div>
             </div>
         </div>
+        <!-- Modal para el jardín -->
+        <div id="modalJardin" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Jardín
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalJardin')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Modal para la biblioteca -->
+        <div id="modalBiblioteca" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Biblioteca
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalBiblioteca')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div id="modalEscritorio" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Escritorio
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalEscritorio')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Capítulo 2: Secretos de la Alta Sociedad -->
         <div id="capitulo2" class="hidden">
@@ -96,6 +182,94 @@
                 </div>
             </div>
         </div>
+
+        <div id="modalFamilia" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Escritorio
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalFamilia')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalAmigos" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Escritorio
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalAmigos')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="modalSocios" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
+            role="dialog" aria-modal="true">
+            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                    Escritorio
+                                </h3>
+                                <div class="mt-2 text-black">
+                                    <p class="modal-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                        <button onclick="ocultarModal('modalSocios')" type="button"
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Capítulo   3: Las Sombras de la Mansión -->
         <div id="capitulo3" class="hidden">
             <h2 class="text-lg font-bold my-4">Capítulo 3: Las Sombras de la Mansión</h2>
@@ -150,28 +324,32 @@
                 </div>
             </div>
 
- <!-- Habitación Sellada -->
-<div id="habitacionSellada" class="hidden">
-    <h3 class="text-md font-semibold my-4">Habitación Sellada</h3>
-    <p>Encuentras una puerta sellada que solo se abre con la combinación correcta, basada en las fechas más significativas de la vida de Vidal.</p>
-    <div class="flex flex-col items-center">
-        <input type="text" id="combinacionHabitacion" placeholder="Ingresa la combinación" class="text-black mt-4 p-2 border border-gray-300 rounded">
-        <button onclick="verificarCombinacion()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Verificar Combinación</button>
-    </div>
-    <!-- Teclado virtual -->
-    <div id="tecladoNumerico" class="grid grid-cols-3 gap-2 mt-4">
-        <button onclick="agregarNumero('1')">1</button>
-        <button onclick="agregarNumero('2')">2</button>
-        <button onclick="agregarNumero('3')">3</button>
-        <button onclick="agregarNumero('4')">4</button>
-        <button onclick="agregarNumero('5')">5</button>
-        <button onclick="agregarNumero('6')">6</button>
-        <button onclick="agregarNumero('7')">7</button>
-        <button onclick="agregarNumero('8')">8</button>
-        <button onclick="agregarNumero('9')">9</button>
-        <button onclick="agregarNumero('0')">0</button>
-        <button onclick="borrarUltimoNumero()">Borrar</button>
-    </div>
+            <!-- Habitación Sellada -->
+            <div id="habitacionSellada" class="hidden">
+                <h3 class="text-md font-semibold my-4">Habitación Sellada</h3>
+                <p>Encuentras una puerta sellada que solo se abre con la combinación correcta, basada en las fechas más
+                    significativas de la vida de Vidal.</p>
+                <div class="flex flex-col items-center">
+                    <input type="text" id="combinacionHabitacion" placeholder="Ingresa la combinación"
+                        class="text-black mt-4 p-2 border border-gray-300 rounded">
+                    <button onclick="verificarCombinacion()"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Verificar
+                        Combinación</button>
+                </div>
+                <!-- Teclado virtual -->
+                <div id="tecladoNumerico" class="grid grid-cols-3 gap-2 mt-4">
+                    <button onclick="agregarNumero('1')">1</button>
+                    <button onclick="agregarNumero('2')">2</button>
+                    <button onclick="agregarNumero('3')">3</button>
+                    <button onclick="agregarNumero('4')">4</button>
+                    <button onclick="agregarNumero('5')">5</button>
+                    <button onclick="agregarNumero('6')">6</button>
+                    <button onclick="agregarNumero('7')">7</button>
+                    <button onclick="agregarNumero('8')">8</button>
+                    <button onclick="agregarNumero('9')">9</button>
+                    <button onclick="agregarNumero('0')">0</button>
+                    <button onclick="borrarUltimoNumero()">Borrar</button>
+                </div>
                 <!-- Modal para la nota -->
                 <div id="modalNota" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title"
                     role="dialog" aria-modal="true">

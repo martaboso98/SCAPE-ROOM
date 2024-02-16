@@ -17,21 +17,20 @@ function interrogarSospechoso(grupo) {
 
     switch (grupo) {
         case 'familia':
-            mensaje = "Al presionar a la familia sobre las finanzas de Vidal, mencionan su reciente adquisición de una mansión con reluctancia. Un miembro murmura, 'Ese lugar... tiene que guardar secretos oscuros por la obsesión que tenía Vidal.' Su nerviosismo es palpable, especialmente cuando se menciona la llave encontrada";
+            mostrarModal('modalFamilia', "Al presionar a la familia sobre las finanzas de Vidal, mencionan su reciente adquisición de una mansión con reluctancia. Un miembro murmura, 'Ese lugar... tiene que guardar secretos oscuros por la obsesión que tenía Vidal.' Su nerviosismo es palpable, especialmente cuando se menciona la llave encontrada");
             penalizacion = 30;
             break;
         case 'amigos':
-            mensaje = "Los amigos de Vidal, visiblemente incómodos, recuerdan sus últimas semanas con detalles dispersos. 'Se obsesionó con esa mansión, como si algo o alguien lo llamara allí', dice uno, evadiendo tu mirada. El tono sugiere que algo más que la búsqueda de paz atormentaba a Vidal.";
+            mostrarModal('modalAmigos', "Los amigos de Vidal, visiblemente incómodos, recuerdan sus últimas semanas con detalles dispersos. 'Se obsesionó con esa mansión, como si algo o alguien lo llamara allí', dice uno, evadiendo tu mirada. El tono sugiere que algo más que la búsqueda de paz atormentaba a Vidal.");
             correcto = true;
 
             break;
         case 'socios':
-            mensaje = "Los socios hablan de la 'inversión final' de Vidal con una mezcla de confusión y miedo. 'Esa mansión... decía que cambiaría su vida', comparten. Uno añade, 'Pero no de la manera que pensábamos ya que su codicia lo ha matado.' Su tono implica que la mansión era más que una simple inversión.";
+            mostrarModal('modalSocios', "Los socios hablan de la 'inversión final' de Vidal con una mezcla de confusión y miedo. 'Esa mansión... decía que cambiaría su vida', comparten. Uno añade, 'Pero no de la manera que pensábamos ya que su codicia lo ha matado.' Su tono implica que la mansión era más que una simple inversión.");
             correcto = true;
             break;
     }
 
-    alert(mensaje);
     estadoJuego.interaccionesCap2[grupo] = true;
 
     if (!correcto) {
@@ -61,4 +60,16 @@ function verificarProgresoInterrogatorios() {
     if (estadoJuego.interaccionesCap2.amigos && estadoJuego.interaccionesCap2.socios) {
         alert("Has recopilado suficiente información. ¿Qué será lo próximo?");
     }
+}
+
+function mostrarModal(idModal, mensaje) {
+    const modal = document.getElementById(idModal);
+    const contenidoModal = modal.querySelector('.modal-content');
+    contenidoModal.textContent = mensaje;
+    modal.classList.remove('hidden');
+}
+
+function ocultarModal(idModal) {
+    const modal = document.getElementById(idModal);
+    modal.classList.add('hidden');
 }
